@@ -1,0 +1,10 @@
+# Direktori node_modules/ berisi dependensi proyek yang diinstal melalui npm atau yarn
+node_modules/
+
+# Direktori dist/ atau build/ berisi file hasil build atau output dari proyek
+dist/
+build/
+
+# Direktori .idea/ atau .vscode/ berisi pengaturan proyek spesifik untuk editor
+.idea/
+.vscode/
