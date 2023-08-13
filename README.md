@@ -15,6 +15,7 @@ Website. This website showcases information about our company, its services, and
 
 1. Clone this repository to your local machine.
 2. Navigate to the project directory
+
     ```shell
     cd dksi-profile-website
     ```
@@ -23,6 +24,7 @@ Website. This website showcases information about our company, its services, and
     npm install
     ```
 4. Build the project
+
     ```shell
     npm run build
     ```
