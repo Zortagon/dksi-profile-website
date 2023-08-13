@@ -34,6 +34,7 @@ Website. This website showcases information about our company, its services, and
 
 1. Follow steps 1-3 from the "Getting Started" section.
 2. Start the development server
+
    ```shell
    npm run dev
    ```
