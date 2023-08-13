@@ -1,25 +1,26 @@
 {
-    "name": "dksi-profile-website",
-    "description": "Company Profile website of PT Dua Kawan Sejahtera Indonesia.",
-    "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/Zortagon/dksi-profile-website.git"
-    },
-    "author": "Aldian Fernanda",
-    "license": "MIT",
-    "bugs": {
-        "url": "https://github.com/Zortagon/dksi-profile-website/issues"
-    },
-    "homepage": "https://github.com/Zortagon/dksi-profile-website#readme",
-    "devDependencies": {
-        "prettier": "^3.0.1",
-        "prettier-plugin-tailwindcss": "^0.5.2",
-        "tailwindcss": "^3.3.3",
-        "webpack": "^5.88.2",
-        "webpack-cli": "^5.1.4",
-        "webpack-dev-server": "^4.15.1"
-    }
+	"name": "dksi-profile-website",
+	"description": "Company Profile website of PT Dua Kawan Sejahtera Indonesia.",
+	"scripts": {
+		"build:dev": "webpack --config webpack/webpack.config.js"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/Zortagon/dksi-profile-website.git"
+	},
+	"author": "Aldian Fernanda",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/Zortagon/dksi-profile-website/issues"
+	},
+	"homepage": "https://github.com/Zortagon/dksi-profile-website#readme",
+	"devDependencies": {
+		"prettier": "^3.0.1",
+		"prettier-plugin-tailwindcss": "^0.5.2",
+		"tailwindcss": "^3.3.3",
+		"webpack": "^5.88.2",
+		"webpack-cli": "^5.1.4",
+		"webpack-dev-server": "^4.15.1",
+		"webpack-merge": "^5.9.0"
+	}
 }
