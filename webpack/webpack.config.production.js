@@ -7,8 +7,10 @@ module.exports = merge([
         mode: "production",
         output: {
             filename: "js/[name][contenthash].js",
+            assetModuleFilename: "img/[hash][ext]",
+            environment: {
+                arrowFunction: false,
+            },
         },
     },
 ]);
-
-console.info(commonConfiguration.mode);
