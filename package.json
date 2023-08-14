@@ -2,8 +2,8 @@
     "name": "dksi-profile-website",
     "description": "Company Profile website of PT Dua Kawan Sejahtera Indonesia.",
     "scripts": {
-        "build:development": "webpack --config webpack/webpack.config.js",
-        "build": "webpack --config webpack/webpack.config.production.js"
+        "build:development": "set NODE_ENV=development && webpack --config webpack/webpack.config.js",
+        "build": "set NODE_ENV=production && webpack --config webpack/webpack.config.production.js"
     },
     "repository": {
         "type": "git",
