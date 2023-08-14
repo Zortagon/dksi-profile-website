@@ -1,3 +1,5 @@
+const HTMLWebpackPlugin = require("html-webpack-plugin");
+const MiniCSSExtractPlugin = require("mini-css-extract-plugin");
 const path = require("path");
 
 module.exports = {
@@ -13,6 +15,24 @@ module.exports = {
         alias: {
             jquery: "jquery/dist/jquery.slim.js",
         },
+    },
+    plugins: [
+        new HTMLWebpackPlugin({ template: "src/index.html" }),
+        new MiniCSSExtractPlugin({
+            filename: "css/[name].css",
+        }),
+    ],
+    module: {
+        rules: [
+            {
+                test: /\.css$/i,
+                use: [
+                    MiniCSSExtractPlugin.loader,
+                    "css-loader",
+                    "postcss-loader",
+                ],
+            },
+        ],
     },
     devServer: {
         static: {
