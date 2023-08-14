@@ -2,13 +2,21 @@ const HTMLWebpackPlugin = require("html-webpack-plugin");
 const MiniCSSExtractPlugin = require("mini-css-extract-plugin");
 const path = require("path");
 
+// Check if current environment is "development" or "production"
+const isDevelopment = () =>
+    process.env.NODE_ENV.replace(/\s/g, "") === "development";
+
 module.exports = {
     mode: "development",
     entry: path.resolve("src/js/index.js"),
     output: {
         path: path.resolve("public"),
-        filename: "js/[name].js",
-        assetModuleFilename: "img/[name][ext]",
+        filename: isDevelopment()
+            ? "js/[name].js"
+            : "js/[name][contenthash].js",
+        assetModuleFilename: isDevelopment()
+            ? "img/[name][ext]"
+            : "img/[name][contenthash][ext]",
         clean: true,
     },
     resolve: {
@@ -19,7 +27,9 @@ module.exports = {
     plugins: [
         new HTMLWebpackPlugin({ template: "src/index.html" }),
         new MiniCSSExtractPlugin({
-            filename: "css/[name].css",
+            filename: isDevelopment()
+                ? "css/[name].css"
+                : "css/[name][contenthash].css",
         }),
     ],
     module: {
