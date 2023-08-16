@@ -13,6 +13,56 @@
 }
 
 @layer components {
+    .navbar-menu-button {
+        width: theme("width.10");
+        height: theme("height.10");
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: theme("gap.2");
+        align-items: center;
+        padding: theme("padding[0.5]") theme("padding[2.5]");
+
+        &::after {
+            content: "";
+            display: block;
+            background-color: theme("colors.trapped-darkness");
+            width: theme('width.5');
+            height: theme("height[0.5]");
+            transition: .2s;
+        }
+
+        &::before {
+            content: "";
+            display: block;
+            background-color: theme("colors.trapped-darkness");
+            width: theme('width.5');
+            height: theme("height[0.5]");
+            transition: .2s;
+        }
+
+        &.active {
+            position: relative;
+            justify-content: center;
+
+            &::after {
+                position: absolute;
+                width: theme("width.5");
+                transform: rotate(-45deg);
+            }
+
+            &::before {
+                position: absolute;
+                width: theme("width.5");
+                transform: rotate(45deg);
+            }
+        }
+
+        @media screen(lg) {
+            display: none;
+        }
+    }
+
     .content-container {
         max-width: theme('maxWidth.7xl');
         margin: 0 theme('margin.auto');
