@@ -2,7 +2,9 @@
     "name": "dksi-profile-website",
     "description": "Company Profile website of PT Dua Kawan Sejahtera Indonesia.",
     "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
+        "build:development": "webpack -c webpack.config.js --env development",
+        "build": "webpack -c webpack.config.js --env production",
+        "serve": "webpack serve -c webpack.config.js"
     },
     "repository": {
         "type": "git",
@@ -15,11 +17,25 @@
     },
     "homepage": "https://github.com/Zortagon/dksi-profile-website#readme",
     "devDependencies": {
+        "@babel/core": "^7.22.10",
+        "@babel/preset-env": "^7.22.10",
+        "babel-loader": "^9.1.3",
+        "css-loader": "^6.8.1",
+        "cssnano": "^6.0.1",
+        "html-webpack-plugin": "^5.5.3",
+        "mini-css-extract-plugin": "^2.7.6",
+        "postcss": "^8.4.27",
+        "postcss-loader": "^7.3.3",
+        "postcss-preset-env": "^9.1.1",
         "prettier": "^3.0.1",
         "prettier-plugin-tailwindcss": "^0.5.2",
         "tailwindcss": "^3.3.3",
         "webpack": "^5.88.2",
         "webpack-cli": "^5.1.4",
-        "webpack-dev-server": "^4.15.1"
+        "webpack-dev-server": "^4.15.1",
+        "webpack-merge": "^5.9.0"
+    },
+    "dependencies": {
+        "jquery": "^3.7.0"
     }
 }
