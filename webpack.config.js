@@ -34,6 +34,12 @@ module.exports = (env) => {
             }),
             new HTMLWebpackPlugin({
                 title: "ICT Solutions for Businesses · PT Dua Kawan Sejahtera Indonesia",
+                content: {
+                    news: [
+                        "[New] Introducing cutting-edge telemedicine equipment solutions! More Information ->",
+                        "[Unveiling Latest Products] PT DKSI and ViewSonic showcase new innovations at E-Katalog exhibition ->",
+                    ],
+                },
                 hash: true,
                 template: "src/index.html",
             }),
