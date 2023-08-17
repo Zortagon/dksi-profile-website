@@ -13,12 +13,41 @@
 }
 
 @layer components {
+    .content-container {
+        max-width: theme('maxWidth.7xl');
+        margin: 0 theme('margin.auto');
+        padding: 0 theme('padding.4');
+
+        @media screen(sm) {
+            padding: 0 theme('padding.5');
+        }
+    }
+
+    .topBarSwiper-container {
+        width: theme("width.full");
+        height: theme("height.9");
+
+        .swiper-slide {
+            @apply flex justify-center items-center;
+            font-size: theme("fontSize.sm");
+
+            & a {
+                color: rgb(255 255 255 / 0.75);
+                transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+                transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+                transition-duration: 150ms;
+
+                &:hover {
+                    color: white;
+                }
+            }
+        }
+    }
+
     .navbar-menu-button {
+        @apply flex justify-center items-center flex-col;
         width: theme("width.10");
         height: theme("height.10");
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
         gap: theme("gap.2");
         align-items: center;
         padding: theme("padding[0.5]") theme("padding[2.5]");
@@ -60,16 +89,6 @@
 
         @media screen(lg) {
             display: none;
-        }
-    }
-
-    .content-container {
-        max-width: theme('maxWidth.7xl');
-        margin: 0 theme('margin.auto');
-        padding: 0 theme('padding.4');
-
-        @media screen(sm) {
-            padding: 0 theme('padding.5');
         }
     }
 }

@@ -1,6 +1,11 @@
 import $ from "jquery";
 import "../css/tailwind-input.css";
 
-$(".navbar-menu-button").on("click", function () {
-    $(this).toggleClass("active");
+import { topBarSwiper } from "./components/TopBarComponent";
+
+$(function () {
+    topBarSwiper();
+    $(".navbar-menu-button").on("click", function () {
+        $(this).toggleClass("active");
+    });
 });
