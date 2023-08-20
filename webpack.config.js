@@ -13,7 +13,7 @@ module.exports = (env) => {
                 environment === "production"
                     ? "js/[name][contenthash].js"
                     : "js/[name].js",
-            assetModuleFilename: "img/[hash][ext]",
+            assetModuleFilename: "static/[hash][ext]",
             clean: true,
             environment: {
                 arrowFunction: !(environment === "production"),
@@ -40,7 +40,6 @@ module.exports = (env) => {
                         "[Unveiling Latest Products] PT DKSI and ViewSonic showcase new innovations at E-Katalog exhibition ->",
                     ],
                 },
-                hash: true,
                 template: "src/index.html",
             }),
         ],
@@ -57,6 +56,10 @@ module.exports = (env) => {
                             ],
                         },
                     },
+                },
+                {
+                    test: /\.html$/i,
+                    loader: "html-loader",
                 },
                 {
                     test: /\.css$/i,
